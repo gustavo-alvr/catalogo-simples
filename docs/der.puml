@@ -1,0 +1,27 @@
+@startuml
+' DER - Catálogo Simples
+title DER - catalogo_db
+
+entity "CATALOGO" as CAT {
+  * id : BIGINT <<PK>> <<AUTO_INCREMENT>>
+  --
+  * titulo : VARCHAR(255) <<NOT NULL>>
+  * tipo : VARCHAR(10) <<NOT NULL>> -- LIVRO, SERIE, FILME
+  * genero : VARCHAR(100) <<NOT NULL>>
+  * ano_lancamento : INT <<NOT NULL>> -- CHECK 1900-2100
+  descricao : TEXT <<NULL>>
+  avaliacao : DECIMAL(3,1) <<NULL>> -- 0.0-10.0
+  * data_cadastro : TIMESTAMP <<DEFAULT CURRENT_TIMESTAMP>>
+}
+
+note right of CAT
+  Índices:
+  - idx_catalogo_titulo (titulo)
+  - idx_catalogo_tipo (tipo)
+  Constraints:
+  - chk_tipo CHECK (tipo IN 'LIVRO','SERIE','FILME')
+  - chk_ano CHECK (ano_lancamento BETWEEN 1900 AND 2100)
+  - chk_avaliacao CHECK (avaliacao BETWEEN 0 AND 10)
+end note
+
+@enduml

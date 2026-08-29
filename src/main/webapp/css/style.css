@@ -1,0 +1,75 @@
+/* Catálogo Simples - CSS limpo e responsivo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+header h1 { font-size: 1.8rem; }
+header p { opacity: 0.85; font-size: 0.95rem; }
+nav.actions {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: space-between; align-items: center;
+    margin: 20px 0; background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+nav.actions form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+input[type="text"], input[type="number"], select, textarea {
+    padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; min-width: 140px;
+}
+textarea { min-height: 90px; resize: vertical; }
+.btn {
+    display: inline-block; padding: 8px 14px; border-radius: 6px; text-decoration: none;
+    border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: 0.2s;
+}
+.btn-primary { background: #1e3a5f; color: #fff; }
+.btn-primary:hover { background: #2a4f82; }
+.btn-secondary { background: #e0e7ef; color: #1e3a5f; }
+.btn-secondary:hover { background: #cbd8ea; }
+.btn-danger { background: #c0392b; color: #fff; }
+.btn-danger:hover { background: #a93226; }
+.btn-info { background: #2980b9; color: #fff; }
+.btn-info:hover { background: #2471a3; }
+.btn-warning { background: #f39c12; color: #fff; }
+.btn-warning:hover { background: #e08e0b; }
+.grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 10px;
+}
+.card {
+    background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    display: flex; flex-direction: column; gap: 8px;
+}
+.card h3 { font-size: 1.1rem; color: #1e3a5f; }
+.badge {
+    display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; color: #fff;
+}
+.badge-LIVRO { background: #27ae60; }
+.badge-SERIE { background: #8e44ad; }
+.badge-FILME { background: #d35400; }
+.meta { font-size: 0.85rem; color: #555; }
+.meta span { margin-right: 10px; }
+.card-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.alert { padding: 12px 14px; border-radius: 6px; margin: 12px 0; }
+.alert-error { background: #fdecea; color: #611a15; border: 1px solid #f5c6cb; }
+.alert-success { background: #e8f5e9; color: #1b5e20; border: 1px solid #c8e6c9; }
+.alert-info { background: #e3f2fd; color: #0d47a1; border: 1px solid #bbdefb; }
+.form-card { background: #fff; padding: 22px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 640px; margin: 0 auto; }
+.form-group { margin-bottom: 14px; display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-weight: 600; font-size: 0.9rem; }
+.form-group small { color: #777; }
+.details-card { background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.details-card dl { display: grid; grid-template-columns: 160px 1fr; row-gap: 10px; margin-top: 12px; }
+.details-card dt { font-weight: 700; color: #1e3a5f; }
+footer { text-align: center; padding: 18px; color: #777; font-size: 0.85rem; margin-top: 30px; }
+@media (max-width: 600px) {
+    .details-card dl { grid-template-columns: 1fr; }
+    nav.actions { flex-direction: column; align-items: stretch; }
+}

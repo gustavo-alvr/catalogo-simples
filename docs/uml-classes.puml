@@ -1,0 +1,99 @@
+@startuml
+' Diagrama de Classes - Catálogo Simples
+skinparam classAttributeIconSize 0
+title Diagrama de Classes - Catálogo Simples
+
+enum Tipo {
+  LIVRO
+  SERIE
+  FILME
+}
+
+class ItemCatalogo {
+  - id: Long
+  - titulo: String
+  - tipo: Tipo
+  - genero: String
+  - anoLancamento: Integer
+  - descricao: String
+  - avaliacao: Double
+  - dataCadastro: LocalDateTime
+  + getters/setters
+}
+
+interface CatalogoDAO {
+  + salvar(ItemCatalogo)
+  + listarTodos(): List<ItemCatalogo>
+  + buscarPorId(Long): Optional<ItemCatalogo>
+  + atualizar(ItemCatalogo)
+  + excluir(Long): boolean
+  + buscarPorTitulo(String): List<ItemCatalogo>
+  + buscarPorTipo(Tipo): List<ItemCatalogo>
+  + buscarPorTituloETipo(String, Tipo): List<ItemCatalogo>
+}
+
+class CatalogoDAOImpl {
+  - mapear(ResultSet): ItemCatalogo
+  + salvar()
+  + listarTodos()
+  + buscarPorId()
+  + atualizar()
+  + excluir()
+  + buscarPorTituloETipo()
+}
+
+class CatalogoService {
+  - dao: CatalogoDAO
+  + validar(ItemCatalogo)
+  + salvar(ItemCatalogo)
+  + listarTodos()
+  + buscarPorId(Long)
+  + atualizar(ItemCatalogo)
+  + excluir(Long)
+  + pesquisar(String, Tipo)
+}
+
+class ConnectionFactory {
+  - host: String
+  - port: String
+  - dbName: String
+  + {static} getConnection(): Connection
+}
+
+class CatalogoServlet {
+  - service: CatalogoService
+  + doGet()
+}
+class CadastroServlet {
+  - service: CatalogoService
+  + doGet()
+  + doPost()
+}
+class DetalhesServlet {
+  - service: CatalogoService
+  + doGet()
+}
+class EdicaoServlet {
+  - service: CatalogoService
+  + doGet()
+  + doPost()
+}
+class ExclusaoServlet {
+  - service: CatalogoService
+  + doPost()
+  + doGet()
+}
+
+ItemCatalogo --> Tipo
+CatalogoDAOImpl ..|> CatalogoDAO
+CatalogoService --> CatalogoDAO
+CatalogoDAOImpl --> ConnectionFactory
+CatalogoDAOImpl --> ItemCatalogo
+CatalogoService --> ItemCatalogo
+CatalogoServlet --> CatalogoService
+CadastroServlet --> CatalogoService
+DetalhesServlet --> CatalogoService
+EdicaoServlet --> CatalogoService
+ExclusaoServlet --> CatalogoService
+
+@enduml

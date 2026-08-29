@@ -1,0 +1,10 @@
+# Copie este arquivo para db.properties e preencha com suas credenciais
+# NÃO versione db.properties (já está no .gitignore)
+db.host=localhost
+db.port=3306
+db.name=catalogo_db
+db.user=root
+db.password=sua_senha
+db.useSSL=false
+db.serverTimezone=America/Sao_Paulo
+db.characterEncoding=UTF-8

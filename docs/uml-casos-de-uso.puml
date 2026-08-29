@@ -1,0 +1,23 @@
+@startuml
+' Diagrama de Casos de Uso - Catálogo Simples
+left to right direction
+actor Usuario as U
+rectangle "Catálogo Simples de Livros, Séries e Filmes" {
+  usecase "UC01 - Cadastrar item" as UC1
+  usecase "UC02 - Listar itens" as UC2
+  usecase "UC03 - Visualizar detalhes" as UC3
+  usecase "UC04 - Editar item" as UC4
+  usecase "UC05 - Excluir item" as UC5
+  usecase "UC06 - Pesquisar por título" as UC6
+  usecase "UC07 - Filtrar por tipo" as UC7
+}
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC4
+U --> UC5
+U --> UC6
+U --> UC7
+UC6 ..> UC2 : <<include>>
+UC7 ..> UC2 : <<include>>
+@enduml
