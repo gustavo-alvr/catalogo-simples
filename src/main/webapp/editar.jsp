@@ -11,14 +11,14 @@
 <body>
 <header>
     <h1>Editar Item</h1>
-    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao CatÃ¡logo</a></p>
+    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao Catálogo</a></p>
 </header>
 <div class="container">
     <c:if test="${not empty erro}">
         <div class="alert alert-error"><c:out value="${erro}"/></div>
     </c:if>
     <c:if test="${empty item}">
-        <div class="alert alert-error">Item nÃ£o encontrado.</div>
+        <div class="alert alert-error">Item não encontrado.</div>
     </c:if>
 
     <c:if test="${not empty item}">
@@ -26,7 +26,7 @@
         <form method="post" action="${pageContext.request.contextPath}/editar">
             <input type="hidden" name="id" value="<c:out value='${item.id}'/>"/>
             <div class="form-group">
-                <label for="titulo">TÃ­tulo *</label>
+                <label for="titulo">Título *</label>
                 <input type="text" id="titulo" name="titulo" required maxlength="255" value="<c:out value='${item.titulo}'/>"/>
             </div>
             <div class="form-group">
@@ -38,19 +38,19 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="genero">GÃªnero *</label>
+                <label for="genero">Gênero *</label>
                 <input type="text" id="genero" name="genero" required maxlength="100" value="<c:out value='${item.genero}'/>"/>
             </div>
             <div class="form-group">
-                <label for="anoLancamento">Ano de LanÃ§amento *</label>
+                <label for="anoLancamento">Ano de Lançamento *</label>
                 <input type="number" id="anoLancamento" name="anoLancamento" required min="1900" max="2100" value="<c:out value='${item.anoLancamento}'/>"/>
             </div>
             <div class="form-group">
-                <label for="avaliacao">AvaliaÃ§Ã£o (0 a 10)</label>
+                <label for="avaliacao">Avaliação (0 a 10)</label>
                 <input type="text" id="avaliacao" name="avaliacao" value="<c:out value='${item.avaliacao}'/>" pattern="^\d+([.,]\d)?$"/>
             </div>
             <div class="form-group">
-                <label for="descricao">DescriÃ§Ã£o</label>
+                <label for="descricao">Descrição</label>
                 <textarea id="descricao" name="descricao" rows="4" maxlength="5000"><c:out value="${item.descricao}"/></textarea>
             </div>
             <div style="display:flex; gap:10px;">
@@ -63,4 +63,3 @@
 </div>
 </body>
 </html>
-

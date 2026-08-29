@@ -19,15 +19,14 @@
                 <c:out value="${mensagemErro}"/>
             </c:when>
             <c:otherwise>
-                NÃ£o foi possÃ­vel processar sua solicitaÃ§Ã£o. Tente novamente.
+                Não foi possível processar sua solicitação. Tente novamente.
             </c:otherwise>
         </c:choose>
     </div>
     <p>
-        <a class="btn btn-primary" href="${pageContext.request.contextPath}/catalogo">Voltar ao CatÃ¡logo</a>
-        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/">InÃ­cio</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/catalogo">Voltar ao Catálogo</a>
+        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/">Início</a>
     </p>
 </div>
 </body>
 </html>
-

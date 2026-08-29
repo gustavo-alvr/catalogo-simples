@@ -11,11 +11,11 @@
 <body>
 <header>
     <h1>Detalhes do Item</h1>
-    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao CatÃ¡logo</a></p>
+    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao Catálogo</a></p>
 </header>
 <div class="container">
     <c:if test="${empty item}">
-        <div class="alert alert-error">Item nÃ£o encontrado.</div>
+        <div class="alert alert-error">Item não encontrado.</div>
     </c:if>
 
     <c:if test="${not empty item}">
@@ -23,22 +23,22 @@
             <h2><c:out value="${item.titulo}"/> <span class="badge badge-${item.tipo}"><c:out value="${item.tipo}"/></span></h2>
             <dl>
                 <dt>ID</dt><dd><c:out value="${item.id}"/></dd>
-                <dt>TÃ­tulo</dt><dd><c:out value="${item.titulo}"/></dd>
+                <dt>Título</dt><dd><c:out value="${item.titulo}"/></dd>
                 <dt>Tipo</dt><dd><c:out value="${item.tipo}"/></dd>
-                <dt>GÃªnero</dt><dd><c:out value="${item.genero}"/></dd>
+                <dt>Gênero</dt><dd><c:out value="${item.genero}"/></dd>
                 <dt>Ano</dt><dd><c:out value="${item.anoLancamento}"/></dd>
-                <dt>AvaliaÃ§Ã£o</dt>
+                <dt>Avaliação</dt>
                 <dd>
                     <c:choose>
                         <c:when test="${item.avaliacao != null}"><c:out value="${item.avaliacao}"/> / 10</c:when>
                         <c:otherwise>-</c:otherwise>
                     </c:choose>
                 </dd>
-                <dt>DescriÃ§Ã£o</dt>
+                <dt>Descrição</dt>
                 <dd>
                     <c:choose>
                         <c:when test="${not empty item.descricao}"><c:out value="${item.descricao}"/></c:when>
-                        <c:otherwise><em>Sem descriÃ§Ã£o</em></c:otherwise>
+                        <c:otherwise><em>Sem descrição</em></c:otherwise>
                     </c:choose>
                 </dd>
                 <dt>Data Cadastro</dt><dd><c:out value="${item.dataCadastro}"/></dd>
@@ -56,4 +56,3 @@
 </div>
 </body>
 </html>
-
