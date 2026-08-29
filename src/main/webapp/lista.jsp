@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -29,7 +29,7 @@
     </c:if>
 
     <nav class="actions">
-        <a class="btn btn-primary" href="${pageContext.request.contextPath}/cadastro">[ Cadastrar item ]</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/cadastro">Cadastrar item</a>
 
         <form method="get" action="${pageContext.request.contextPath}/catalogo">
             <input type="text" name="q" placeholder="Pesquisar por título" value="<c:out value='${q}'/>"/>
@@ -39,7 +39,7 @@
                 <option value="SERIE" ${tipoSelecionado == 'SERIE' ? 'selected' : ''}>Séries</option>
                 <option value="FILME" ${tipoSelecionado == 'FILME' ? 'selected' : ''}>Filmes</option>
             </select>
-            <button type="submit" class="btn btn-secondary">[ Pesquisar ]</button>
+            <button type="submit" class="btn btn-secondary">Pesquisar</button>
             <a class="btn btn-secondary" href="${pageContext.request.contextPath}/catalogo">Limpar</a>
         </form>
     </nav>
@@ -75,11 +75,11 @@
                     </p>
                 </c:if>
                 <div class="card-actions">
-                    <a class="btn btn-info" href="${pageContext.request.contextPath}/detalhes?id=${item.id}">Detalhes</a>
-                    <a class="btn btn-warning" href="${pageContext.request.contextPath}/editar?id=${item.id}">Editar</a>
+                    <a class="btn btn-sm btn-info" href="${pageContext.request.contextPath}/detalhes?id=${item.id}">Detalhes</a>
+                    <a class="btn btn-sm btn-warning" href="${pageContext.request.contextPath}/editar?id=${item.id}">Editar</a>
                     <form method="post" action="${pageContext.request.contextPath}/excluir" style="display:inline;" onsubmit="return confirm('Deseja realmente excluir &quot;<c:out value='${item.titulo}'/>&quot;?');">
                         <input type="hidden" name="id" value="${item.id}"/>
-                        <button type="submit" class="btn btn-danger">Excluir</button>
+                        <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
                     </form>
                 </div>
             </div>

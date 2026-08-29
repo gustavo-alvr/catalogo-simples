@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -11,7 +11,7 @@
 <body>
 <header>
     <h1>Cadastrar Item</h1>
-    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao Catálogo</a></p>
+    <p><a href="${pageContext.request.contextPath}/catalogo" style="color:#fff; text-decoration:underline;">Voltar ao CatÃ¡logo</a></p>
 </header>
 <div class="container">
     <c:if test="${not empty erro}">
@@ -21,7 +21,7 @@
     <div class="form-card">
         <form method="post" action="${pageContext.request.contextPath}/cadastro">
             <div class="form-group">
-                <label for="titulo">Título *</label>
+                <label for="titulo">TÃ­tulo *</label>
                 <input type="text" id="titulo" name="titulo" required maxlength="255" value="<c:out value='${item.titulo}'/>" placeholder="Ex: Harry Potter"/>
             </div>
             <div class="form-group">
@@ -34,21 +34,21 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="genero">Gênero *</label>
+                <label for="genero">GÃªnero *</label>
                 <input type="text" id="genero" name="genero" required maxlength="100" value="<c:out value='${item.genero}'/>" placeholder="Ex: Fantasia"/>
             </div>
             <div class="form-group">
-                <label for="anoLancamento">Ano de Lançamento *</label>
+                <label for="anoLancamento">Ano de LanÃ§amento *</label>
                 <input type="number" id="anoLancamento" name="anoLancamento" required min="1900" max="2100" value="<c:out value='${item.anoLancamento}'/>" placeholder="Ex: 2023"/>
             </div>
             <div class="form-group">
-                <label for="avaliacao">Avaliação (0 a 10)</label>
+                <label for="avaliacao">AvaliaÃ§Ã£o (0 a 10)</label>
                 <input type="text" id="avaliacao" name="avaliacao" value="<c:out value='${item.avaliacao}'/>" placeholder="Ex: 8.5" pattern="^\d+([.,]\d)?$" title="0 a 10, ex: 8.5"/>
-                <small>Use ponto ou vírgula. Deixe em branco se não quiser avaliar.</small>
+                <small>Use ponto ou vÃ­rgula. Deixe em branco se nÃ£o quiser avaliar.</small>
             </div>
             <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao" rows="4" maxlength="5000" placeholder="Breve descrição"><c:out value="${item.descricao}"/></textarea>
+                <label for="descricao">DescriÃ§Ã£o</label>
+                <textarea id="descricao" name="descricao" rows="4" maxlength="5000" placeholder="Breve descriÃ§Ã£o"><c:out value="${item.descricao}"/></textarea>
             </div>
             <div style="display:flex; gap:10px;">
                 <button type="submit" class="btn btn-primary">Salvar</button>
@@ -59,3 +59,4 @@
 </div>
 </body>
 </html>
+

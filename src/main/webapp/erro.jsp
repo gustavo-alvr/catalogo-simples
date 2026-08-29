@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="false" %>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" isErrorPage="false" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -19,14 +19,15 @@
                 <c:out value="${mensagemErro}"/>
             </c:when>
             <c:otherwise>
-                Não foi possível processar sua solicitação. Tente novamente.
+                NÃ£o foi possÃ­vel processar sua solicitaÃ§Ã£o. Tente novamente.
             </c:otherwise>
         </c:choose>
     </div>
     <p>
-        <a class="btn btn-primary" href="${pageContext.request.contextPath}/catalogo">Voltar ao Catálogo</a>
-        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/">Início</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/catalogo">Voltar ao CatÃ¡logo</a>
+        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/">InÃ­cio</a>
     </p>
 </div>
 </body>
 </html>
+

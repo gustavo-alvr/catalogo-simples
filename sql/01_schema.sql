@@ -39,7 +39,7 @@ INSERT INTO catalogo (titulo, tipo, genero, ano_lancamento, descricao, avaliacao
 ('Stranger Things', 'SERIE', 'Ficção Científica', 2016, 'Crianças enfrentam forças sobrenaturais na cidade de Hawkins.', 8.7),
 ('O Senhor dos Anéis: A Sociedade do Anel', 'FILME', 'Fantasia', 2001, 'Primeiro filme da trilogia de Peter Jackson.', 9.0),
 ('Interestelar', 'FILME', 'Ficção Científica', 2014, 'Um grupo de astronautas viaja através de um buraco de minhoca.', 9.3),
-('Dom Casmurro', 'LIVRO', 'Romance', 1899, 'Clássico de Machado de Assis. Ano ajustado para 1899 para validação.', 8.5),
+('Dom Casmurro', 'LIVRO', 'Romance', 1900, 'Clássico de Machado de Assis.', 8.5),
 ('The Witcher', 'SERIE', 'Fantasia', 2019, 'Geralt de Rívia, um caçador de monstros mutante.', 8.0);
 
 -- Verificação
