@@ -77,7 +77,7 @@
                 <div class="card-actions">
                     <a class="btn btn-sm btn-info" href="${pageContext.request.contextPath}/detalhes?id=${item.id}">Detalhes</a>
                     <a class="btn btn-sm btn-warning" href="${pageContext.request.contextPath}/editar?id=${item.id}">Editar</a>
-                    <form method="post" action="${pageContext.request.contextPath}/excluir" style="display:inline;" onsubmit="return confirm('Deseja realmente excluir &quot;<c:out value='${item.titulo}'/>&quot;?');">
+                    <form method="post" action="${pageContext.request.contextPath}/excluir" onsubmit="return confirm('Deseja realmente excluir &quot;<c:out value='${item.titulo}'/>&quot;?');">
                         <input type="hidden" name="id" value="${item.id}"/>
                         <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
                     </form>
