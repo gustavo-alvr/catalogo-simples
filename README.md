@@ -138,10 +138,17 @@ mvn javadoc:javadoc
 ```
 
 ## UML / DER
-- `docs/uml-casos-de-uso.puml` - Casos de uso (PlantUML)
-- `docs/uml-classes.puml` - Classes (PlantUML)
-- `docs/der.puml` - DER (PlantUML)
-Renderize com: https://plantuml.com/ ou plugin IntelliJ PlantUML.
+
+### Diagrama de Casos de Uso
+![Diagrama de Casos de Uso](docs/png/uml-casos-de-uso.png)
+
+### Diagrama de Classes
+![Diagrama de Classes](docs/png/uml-classes.png)
+
+### DER (Diagrama Entidade-Relacionamento)
+![DER](docs/png/der.png)
+
+> Arquivos fonte PlantUML em `docs/*.puml`. Renderize com https://plantuml.com/ ou plugin IntelliJ PlantUML.
 
 ## Segurança
 - Todos os SQL via `PreparedStatement` (anti SQL Injection)
