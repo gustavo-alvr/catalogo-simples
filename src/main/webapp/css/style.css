@@ -22,6 +22,8 @@ nav.actions {
     margin: 20px 0; background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 nav.actions form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+nav.actions .btn { height: 32px; padding: 0 14px; font-size: 0.85rem; }
+nav.actions input[type="text"], nav.actions select { height: 32px; padding: 0 10px; font-size: 0.85rem; min-width: 140px; box-sizing: border-box; }
 input[type="text"], input[type="number"], select, textarea {
     padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; min-width: 140px;
 }
